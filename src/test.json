@@ -1,0 +1,16 @@
+{
+  "name": "Test Class Two",
+  "environment": { "tool": "Monday", "os": "Windows" },
+  "tests": [
+    {
+      "summary": "Test Summary Two",
+      "definition": "Test Definition Two",
+      "function_name": "test_func_pass_two"
+    },
+    {
+        "summary": "Test Summary Three",
+        "definition": "Test Definition Three",
+        "function_name": "test_func_fail_one"
+    }
+  ]
+}
