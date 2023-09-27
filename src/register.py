@@ -1,5 +1,5 @@
 """Register Test Classes."""
-from models import TestClass, TestClassRegistry
+from models import TestClass, TestClassRegistry, Execution, User, Test
 import json
 
 TEST_DB_JSON = "./register.json"
@@ -40,9 +40,27 @@ class TestRegister:
 
 
 if __name__ == "__main__":
-    with open("./test.json", "r") as test_file:
-        test_class = json.load(test_file)
+    # with open("./test.json", "r") as test_file:
+    #     test_class = json.load(test_file)
     
-    register = TestRegister()
-    register.insert_test_class(test_class)
-    register.save_db()
+    # register = TestRegister()
+    # register.insert_test_class(test_class)
+    # register.save_db()
+    user = User(username="test_user")
+    test_class = TestClass(**{
+        "name": "Test Class One",
+        "environment": { "tool": "Jira", "os": "Linux" },
+        "tests": [
+            {
+            "summary": "Test Summary One",
+            "definition": "Test Definition One",
+            "function_name": "test_func_pass_one"
+            }
+        ]
+    })
+    execution = Execution(
+        user=user,
+        title="Test Execution",
+        test_class=test_class,
+        
+    )
