@@ -44,6 +44,7 @@ class Execution(BaseModel):
 
     user: User
     title: str
-    environment: TestEnvironment
+    test_class: TestClass
+    tests: List[Test] = None
     state: Literal['Created', 'Queued', 'Executing', 'Finished'] = 'Created'
     start_at: Optional[datetime] = None
