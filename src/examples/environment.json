@@ -1,0 +1,6 @@
+{
+  "name": "Test Asset 1",
+  "type": "Virtual",
+  "hostname": "testhostname",
+  "config": { "tool": "Jira", "os": "Linux" }
+}

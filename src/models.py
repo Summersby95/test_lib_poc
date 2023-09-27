@@ -19,6 +19,15 @@ class TestEnvironment(BaseModel):
     os: Literal['Windows', 'Linux']
 
 
+class Environment(BaseModel):
+    """Test Environment Model."""
+
+    name: str
+    type: Literal['Physical', 'Virtual'] = 'Physical'
+    hostname: str
+    config: TestEnvironment
+
+
 class TestClass(BaseModel):
     """Test Class Definition Model."""
 

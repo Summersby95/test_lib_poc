@@ -1,0 +1,18 @@
+{
+  "user": { "username": "test_user" },
+  "title": "Test Execution",
+  "test_class": {
+    "name": "Test Class One",
+    "environment": { "tool": "Jira", "os": "Linux" },
+    "tests": [
+      {
+        "summary": "Test Summary One",
+        "definition": "Test Definition One",
+        "function_name": "test_func_pass_one"
+      }
+    ]
+  },
+  "tests": null,
+  "state": "Created",
+  "start_at": null
+}
