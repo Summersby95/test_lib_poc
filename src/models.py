@@ -2,6 +2,7 @@
 from pydantic import BaseModel
 from typing import List, Literal, Optional
 from datetime import datetime
+import secrets
 
 
 class Test(BaseModel):
@@ -57,3 +58,15 @@ class Execution(BaseModel):
     tests: Optional[List[Test]] = None
     state: Literal['Created', 'Queued', 'Executing', 'Finished'] = 'Created'
     start_at: Optional[datetime] = None
+
+
+class Token(BaseModel):
+    """Token Model."""
+
+    token: str = secrets.token_hex(16)
+
+
+class IDResponse(BaseModel):
+    """ID Response Model."""
+
+    id: str

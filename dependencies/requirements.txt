@@ -1,0 +1,7 @@
+fastapi==0.101.1
+uvicorn[standard]==0.22.0
+httpx==0.24.1
+requests==2.27.1
+typing==3.7.4.3
+pydantic==2.4.1
+pymongo==4.5.0
